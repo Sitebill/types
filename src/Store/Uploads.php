@@ -13,6 +13,8 @@ class Uploads
     public $vk_video_id;
     public $vk_owner_id;
     public $vk_player;
+    public $yc_video_id;
+    public $yc_player_url;
 
     /**
      * @return mixed
@@ -191,6 +193,28 @@ class Uploads
         $this->setVkVideoId($srcArray['vk_video_id'] ?? null);
         $this->setVkOwnerId($srcArray['vk_owner_id'] ?? null);
         $this->setVkPlayer($srcArray['vk_player'] ?? null);
+        $this->setYcVideoId($srcArray['yc_video_id'] ?? null);
+        $this->setYcPlayerUrl($srcArray['yc_player_url'] ?? null);
 
+    }
+
+    public function getYcVideoId()
+    {
+        return $this->yc_video_id;
+    }
+
+    public function setYcVideoId($yc_video_id): void
+    {
+        $this->yc_video_id = $yc_video_id;
+    }
+
+    public function getYcPlayerUrl()
+    {
+        return $this->yc_player_url;
+    }
+
+    public function setYcPlayerUrl($yc_player_url): void
+    {
+        $this->yc_player_url = $yc_player_url;
     }
 }
